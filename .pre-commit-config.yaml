@@ -1,0 +1,10 @@
+repos:
+- repo: https://github.com/trufflesecurity/trufflehog.git
+  rev: v3.52.1
+  hooks:
+    - id: trufflehog
+      name: Pre-commit Secret Scan
+      entry: trufflehog git file://.
+      args:
+        - --only-verified
+        - --fail
