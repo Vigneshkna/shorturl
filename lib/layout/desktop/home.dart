@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:motion_toast/motion_toast.dart';
+import 'package:motion_toast/resources/arrays.dart';
 import 'package:neopop/widgets/buttons/neopop_button/neopop_button.dart';
 
 import '../../components/footer.dart';
 import '../../utils/appConst.dart';
+import '../../utils/toast.dart';
 
 class HomeDesktop extends StatefulWidget {
   const HomeDesktop({super.key,});
@@ -72,7 +75,6 @@ class _HomeDesktopState extends State<HomeDesktop> {
                               hintStyle: TextStyle(
                                   color: myFocusNode.hasFocus ? AppConst.appWhite500 : AppConst.appWhite100
                               ),
-
                               contentPadding: const EdgeInsets.fromLTRB(32, 16, 32, 16),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(8),
@@ -150,7 +152,9 @@ class _HomeDesktopState extends State<HomeDesktop> {
             ],
           )),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: (){
+          toastSuccess(context,"Title test","Test Des");
+        },
         tooltip: 'Help',
         child: const Icon(Icons.add),
       ),

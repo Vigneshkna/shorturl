@@ -1,5 +1,6 @@
 # Miscellaneous
 *.class
+*.env
 *.log
 *.pyc
 *.swp
@@ -42,3 +43,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+#Backend related ingorable files
+Backend/node_modules
